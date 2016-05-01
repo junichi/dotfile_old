@@ -1,0 +1,10 @@
+- name: OSX Provisioning
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  sudo: false
+
+  roles:
+    - brew
+    - brew-cask
+    - fonts

@@ -1,0 +1,36 @@
+homebrew_taps:
+  # caskroom/cask
+  - caskroom/versions
+  - homebrew/binary
+  - homebrew/dupes
+  - sanemat/font
+  # phinze/cask
+
+homebrew_packages:
+  - ansible
+  - autoconf
+  - automake
+  - curl
+  - cmake
+  - gcc
+  - ctags
+  - git
+  - go
+  - hub
+  - jq
+  - nmap
+  - mysql
+  - openssl
+  - { name: openssl, state: linked, install_options: force }
+  - peco
+  - pkg-config
+  - proctools
+  - readline
+  - sqlite
+  - tmux
+  - tig
+  - tree
+  # vim
+  - wget
+  - { name: zsh, install_options: disable-etcdir }
+  - zsh-completions
