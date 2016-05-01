@@ -1,17 +1,21 @@
 #!/bin/bash
 
-which pip >/dev/null 2>&1
-if [ $? -ne 0 ];
-then
-  echo "not found command pip"
-  echo "install pip"
-  sudo easy_install pip
+# Include
+. ~/dotfiles/etc/init/get_os.sh
+
+# This script is only supported with osx
+if ! [[ "$PLATFORM" == "osx" ]]; then
+    echo "error: this script is only supported with osx"
+    exit 1
 fi
 
-which ansible >/dev/null 2>&1
-if [ $? -ne 0 ];
-then
-  echo "not found command ansible"
-  echo "install ansible"
-  sudo pip install ansible
+###########################################################
+
+if ! which ansible > /dev/null; then
+	echo "Not found ansible!"
+    echo "Install ansible"
+	brew install ansible
+else
+	echo "ansible: already installed"
+	exit
 fi

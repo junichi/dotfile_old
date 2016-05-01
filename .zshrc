@@ -2,6 +2,7 @@
 export PATH=/usr/local:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export LANG=en_EN.UTF-8
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export ANSIBLE_CONFIG="~/.ansible.cfg"
 export EDITOR=vim
 
 # Setting
