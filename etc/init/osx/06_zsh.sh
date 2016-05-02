@@ -1,48 +1,26 @@
 #!/bin/bash
 
-# Include
+###########################################################
 . ~/dotfiles/etc/init/get_os.sh
-get_os
 
-echo zsh.sh
+# This script is only supported with osx
+if ! [[ "$PLATFORM" == "osx" ]]; then
+    echo "error: this script is only supported with osx"
+    exit 1
+fi
+###########################################################
 
 if ! which zsh > /dev/null; then
-	# Install zsh
-    case "$PLATFORM" in
-        # Case of OS X
-        osx)
-            if which brew > /dev/null; then
-                echo "Install zsh with Homebrew"
-                brew install zsh
-            elif which port > /dev/null; then
-                echo "Install zsh with MacPorts"
-                sudo port install zsh-devel
-            else
-                echo "error: require: Homebrew or MacPorts"
-                exit 1
-            fi
-            ;;
-
-        # Case of Linux
-        linux)
-            if which yum > /dev/null; then
-                echo "Install zsh with Yellowdog Updater Modified"
-                sudo yum -y install zsh
-            elif which brew apt-get > /dev/null; then
-                echo "Install zsh with Advanced Packaging Tool"
-                sudo apt-get -y install zsh
-            else
-                echo "error: require: YUM or APT"
-                exit 1
-            fi
-            ;;
-
-        # Other platforms such as BSD are supported
-        *)
-            echo "error: this script is only supported osx and linux"
-            exit 1
-            ;;
-    esac
+    if which brew > /dev/null; then
+        echo "Install zsh with Homebrew"
+        brew install zsh
+    elif which port > /dev/null; then
+        echo "Install zsh with MacPorts"
+        sudo port install zsh-devel
+    else
+        echo "error: require: Homebrew or MacPorts"
+        exit 1
+    fi
 fi
 
 # Run the forced termination with a last exit code

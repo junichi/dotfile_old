@@ -1,5 +1,15 @@
 #!/bin/bash
 
+###########################################################
+. ~/dotfiles/etc/init/get_os.sh
+
+# This script is only supported with osx
+if ! [[ "$PLATFORM" == "osx" ]]; then
+    echo "error: this script is only supported with osx"
+    exit 1
+fi
+###########################################################
+
 set_dashboard() {
 	# disable dashboard
 	defaults write com.apple.dashboard mcx-disabled -bool true
@@ -177,6 +187,7 @@ set_terminal() {
     defaults write com.apple.terminal StringEncodings -array 4
 }
 
+osascript -e 'display notification "Request Password on Terminal" with title "osx-provisioning"'
 sudo -v
 
 # TASK
