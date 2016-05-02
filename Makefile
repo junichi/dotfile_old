@@ -23,8 +23,8 @@ deploy:
 init:
 	@DOTPATH=$(DOTPATH) bash $(DOTPATH)/etc/init/init.sh
 
-test:
-	@DOTPATH=$(DOTPATH) bash $(DOTPATH)/etc/test/test.sh
+#test:
+#	@DOTPATH=$(DOTPATH) bash $(DOTPATH)/etc/test/test.sh
 
 update:
 	git pull origin master
@@ -35,7 +35,7 @@ update:
 install: update deploy init
 	@exec $$SHELL
 
-clean:
+#clean:
 	@echo 'Remove dot files in your home directory...'
 	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
 	-rm -rf $(DOTPATH)
