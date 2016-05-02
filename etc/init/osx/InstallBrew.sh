@@ -9,6 +9,8 @@ if ! [[ "$PLATFORM" == "osx" ]]; then
     exit 1
 fi
 
+###########################################################
+
 # Checking brew
 if which brew > /dev/null; then
 	echo "brew: already installed"
