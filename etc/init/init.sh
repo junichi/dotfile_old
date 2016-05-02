@@ -5,4 +5,4 @@
 DOTPATH=~/dotfiles
 
 get_os
-bash "$DOTPATH"/etc/init/"$PLATFORM"/install.sh
+bash "$DOTPATH"/etc/init/"$PLATFORM"/01_install.sh
