@@ -1,9 +1,8 @@
 syntax enable
-set background=dark
+set background=dark    "または light
 set clipboard+=unnamed
 set number
 set backspace=indent,eol,start
-set autoindent
 set tabstop=4
 set shiftwidth=4
 set nocompatible

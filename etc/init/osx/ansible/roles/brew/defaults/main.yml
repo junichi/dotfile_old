@@ -34,3 +34,4 @@ homebrew_packages:
   - wget
   - { name: zsh, install_options: disable-etcdir }
   - zsh-completions
+  - reattach-to-user-namespace
