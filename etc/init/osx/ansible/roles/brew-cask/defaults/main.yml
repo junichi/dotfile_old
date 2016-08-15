@@ -9,7 +9,7 @@ homebrew_taps:
 homebrew_cask_packages:
   - "0xed"
   - appcleaner
-  - adobe-reader
+  # adobe-reader
   - angry-ip-scanner
   - bettertouchtool
   - betterzipql
@@ -37,13 +37,13 @@ homebrew_cask_packages:
   - macs-fan-control
   # manuscripts
   - minecraft
-  - openoffice
+  # openoffice
   # secrets
   - sequel-pro
   - sitesucker
   - skype
   - sourcetree
-  - sublime-text3
+  - { name: sublime-text3, install_options: force }
   - the-unarchiver
   - utorrent
   - vagrant
@@ -51,4 +51,3 @@ homebrew_cask_packages:
   - vlc
   - vox
   - xtrafinder
-  # yorufukurou

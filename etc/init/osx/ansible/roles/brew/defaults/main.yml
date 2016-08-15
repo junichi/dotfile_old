@@ -35,3 +35,4 @@ homebrew_packages:
   - { name: zsh, install_options: disable-etcdir }
   - zsh-completions
   - reattach-to-user-namespace
+  - ffmpeg

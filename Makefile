@@ -39,3 +39,8 @@ install: update deploy init
 	@echo 'Remove dot files in your home directory...'
 	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
 	-rm -rf $(DOTPATH)
+
+ansible:
+	@DOTPATH=$(DOTPATH) ansible-playbook $(DOTPATH)/etc/init/osx/ansible/playbook.yml -i $(DOTPATH)/etc/init/osx/ansible/hosts
+
+
