@@ -1,0 +1,8 @@
+vim
+make
+gcc
+git
+nmap
+tmux
+zsh
+
