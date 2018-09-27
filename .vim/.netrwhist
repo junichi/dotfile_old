@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/junichi/Develop/Docker/WebServiceTest/.circleci'
 let g:netrw_dirhist_2='/home/junichi/Develop/Docker/WebServiceTest'
 let g:netrw_dirhist_3='/home/junichi/Develop/Docker/WebServiceTest/.circleci'
 let g:netrw_dirhist_4='/home/junichi/Develop/Docker/WebServiceTest/nginx'
+let g:netrw_dirhist_5='/home/junichi/Docker/2018.perform/proxy/sites-available'
+let g:netrw_dirhist_6='/home/junichi/Docker/2018.perform/proxy/sites-available/sites-available.conf'
+let g:netrw_dirhist_7='/home/junichi/.ssh'
+let g:netrw_dirhist_8='/home/junichi/Docker/WebService/.circleci'
